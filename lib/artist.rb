@@ -1,5 +1,5 @@
 class Artist
-attr_accessor :name, :song
+attr_accessor :name
 
 extend Concerns::Findable
 
@@ -18,8 +18,11 @@ extend Concerns::Findable
     @songs
   end
 
-  def self.create(artist)
-    new(name).tap{ |a| a.save }
+  def self.create(name)
+    # new(name).tap{ |a| a.save }
+    artist = Artist.new(name)
+    artist.save
+    artist
   end
 
   def self.destroy_all
