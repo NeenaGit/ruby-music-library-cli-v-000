@@ -14,9 +14,9 @@ extend Concerns::Findable
     @songs = []
   end
 
-  def songs
-    @songs
-  end
+  # def songs
+  #   @songs
+  # end
 
   def self.create(name)
     # new(name).tap{ |a| a.save }
